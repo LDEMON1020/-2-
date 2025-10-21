@@ -4,60 +4,72 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject projectilePrefab1;
-    public GameObject projectilePrefab2;
+    public GameObject[] weapons;
+    public GameObject[] projectilePrefabs;
+
+    private int currentWeaponIndex = 0;
+
     public Transform firePoint;
     Camera cam;
-    public bool Fastmode = false;
+  
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
+        SelectWeapon(currentWeaponIndex);
     }
 
     // Update is called once per frame
     void Update()
     {
-        WeaponSwap();
-
-        if (Fastmode == false && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
-        else if (Fastmode == true && Input.GetMouseButtonDown(0))
-        {
-            Shoot2();
-        }
+
+        WeaponSwap();
     }
 
     void Shoot()
     {
+        if (currentWeaponIndex < 0 || currentWeaponIndex >= projectilePrefabs.Length)
+        {
+            return;
+        }
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         Vector3 targetPoint;
         targetPoint = ray.GetPoint(50f);
         Vector3 direction = (targetPoint - firePoint.position).normalized;
 
-        GameObject proj = Instantiate(projectilePrefab1, firePoint.position, Quaternion.LookRotation(direction));
+        GameObject projectilePrefab = projectilePrefabs[currentWeaponIndex];
+        GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(direction));
     }
-    void Shoot2()
-    {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        Vector3 targetPoint;
-        targetPoint = ray.GetPoint(50f);
-        Vector3 direction = (targetPoint - firePoint.position).normalized;
-
-        GameObject proj = Instantiate(projectilePrefab2, firePoint.position, Quaternion.LookRotation(direction));
-    }
+   
     void WeaponSwap()
     {
-        if (Fastmode == false && Input.GetKeyDown(KeyCode.Z))
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scroll > 0f)
         {
-            Fastmode = true;
+            currentWeaponIndex--;
+            if (currentWeaponIndex < 0)
+                currentWeaponIndex = weapons.Length - 1;
+            SelectWeapon(currentWeaponIndex);
         }
-        else if (Fastmode == true && Input.GetKeyDown(KeyCode.Z))
+        else if (scroll < 0f)
         {
-            Fastmode = false;
-            
+            currentWeaponIndex++;
+            if (currentWeaponIndex >= weapons.Length)
+                currentWeaponIndex = 0;
+            SelectWeapon(currentWeaponIndex);
+        }
+    }
+
+    void SelectWeapon(int index)
+    {
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            weapons[i].SetActive(i == index);
         }
     }
 }

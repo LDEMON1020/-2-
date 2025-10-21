@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     public bool isGrounded;
     public CinemachineSwitcher cs;
-    public PlayerShooting Shooter;
 
     public int maxHP = 100;
     private int currentHP;
@@ -88,22 +87,8 @@ public class PlayerController : MonoBehaviour
             virtualCam.m_Lens.FieldOfView = 60f;
         }
 
-        switch (state)
-        {
-            case PlayerState.Idle:
-                if (Input.GetMouseButtonDown(0))
-                    state = PlayerState.Attackpreparing;
-                break;
-
-            case PlayerState.Attackpreparing:
-               if()
-                break;
-
-            case PlayerState.Attack:
-              
-               
-                break;
-        }
+       
+        
     }
 
    
