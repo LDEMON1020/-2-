@@ -1119,10 +1119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 9021560721731318623, guid: 69f25837a5e92c34a8aa3c67bcbc1ac8, type: 3}
+  - {fileID: 8604706014281164162, guid: 891036a62c439bd409827e089226958f, type: 3}
   - {fileID: 9021560721731318623, guid: bc25956c7564d834d8022a148f445de2, type: 3}
   projectilePrefabs:
-  - {fileID: 9021560721731318623, guid: 69f25837a5e92c34a8aa3c67bcbc1ac8, type: 3}
+  - {fileID: 8604706014281164162, guid: 891036a62c439bd409827e089226958f, type: 3}
   - {fileID: 9021560721731318623, guid: bc25956c7564d834d8022a148f445de2, type: 3}
   Spinning: {fileID: 1487750953}
   attackMode: 0
