@@ -4,9 +4,13 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public enum PlayerState { Idle, Attackpreparing, Attack }
+    public PlayerState state = PlayerState.Idle;
+
     public float speed = 5f;
     public float jumpPower = 5f;
     public float gravity = -9.81f;
+    public float attackCooltime = 3f;
 
     public CinemachineVirtualCamera virtualCam;
     public float rotationSpeed = 10f;
@@ -15,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     public bool isGrounded;
     public CinemachineSwitcher cs;
+    public PlayerShooting Shooter;
 
     public int maxHP = 100;
     private int currentHP;
@@ -81,6 +86,23 @@ public class PlayerController : MonoBehaviour
         {
             speed = 5f;
             virtualCam.m_Lens.FieldOfView = 60f;
+        }
+
+        switch (state)
+        {
+            case PlayerState.Idle:
+                if (Input.GetMouseButtonDown(0))
+                    state = PlayerState.Attackpreparing;
+                break;
+
+            case PlayerState.Attackpreparing:
+               if()
+                break;
+
+            case PlayerState.Attack:
+              
+               
+                break;
         }
     }
 
