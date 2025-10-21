@@ -9,6 +9,8 @@ public class PlayerShooting : MonoBehaviour
 
     private int currentWeaponIndex = 0;
 
+    private bool attackMode = false;
+
     public Transform firePoint;
     Camera cam;
   
@@ -22,27 +24,34 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            attackMode = !attackMode;
+        }
+
+        if (attackMode && Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
 
         WeaponSwap();
+
+        
     }
 
     void Shoot()
     {
-        if (currentWeaponIndex < 0 || currentWeaponIndex >= projectilePrefabs.Length)
-        {
-            return;
-        }
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        Vector3 targetPoint;
-        targetPoint = ray.GetPoint(50f);
-        Vector3 direction = (targetPoint - firePoint.position).normalized;
+            if (currentWeaponIndex < 0 || currentWeaponIndex >= projectilePrefabs.Length)
+            {
+                return;
+            }
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            Vector3 targetPoint;
+            targetPoint = ray.GetPoint(50f);
+            Vector3 direction = (targetPoint - firePoint.position).normalized;
 
-        GameObject projectilePrefab = projectilePrefabs[currentWeaponIndex];
-        GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(direction));
+            GameObject projectilePrefab = projectilePrefabs[currentWeaponIndex];
+            GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(direction));
     }
    
     void WeaponSwap()
