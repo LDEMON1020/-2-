@@ -7,12 +7,14 @@ public class Spinning : MonoBehaviour
     public GameObject iceRune2;
     public float rotationSpeed = 5f;
 
+    public PlayerShooting playerShooting;
+
     public float fadeDuration = 2f; // 서서히 나타나는 시간 (초)
     private Material material1;
     private Material material2;
     private Color originalColor1;
     private Color originalColor2;
-    private bool isFading = false;
+    public bool isFading = false;
     private bool isVisible = false;
     private float fadeTimer = 0f;
 
@@ -40,11 +42,13 @@ public class Spinning : MonoBehaviour
 
         iceRune2.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Z) && !isFading)
+        if (isFading == false && Input.GetKeyDown(KeyCode.Z))
         {
+            playerShooting.attackMode = !playerShooting.attackMode;
             isFading = true;
             fadeTimer = 0f;
         }
+        
 
         if (isFading)
         {

@@ -7,9 +7,11 @@ public class PlayerShooting : MonoBehaviour
     public GameObject[] weapons;
     public GameObject[] projectilePrefabs;
 
+    public Spinning Spinning;
+
     private int currentWeaponIndex = 0;
 
-    private bool attackMode = false;
+    public bool attackMode = false;
 
     public Transform firePoint;
     Camera cam;
@@ -24,19 +26,12 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            attackMode = !attackMode;
-        }
-
-        if (attackMode && Input.GetMouseButtonDown(0))
+        if (attackMode == true && Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
 
         WeaponSwap();
-
-        
     }
 
     void Shoot()
