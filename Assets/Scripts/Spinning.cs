@@ -6,8 +6,10 @@ public class Spinning : MonoBehaviour
 {
     public GameObject iceRune2;
     public float rotationSpeed = 5f;
-
+    
     public PlayerShooting playerShooting;
+    public SpriteRenderer[] spriteRenderers;
+    public SpriteRenderer[] spriteRenderers2;
 
     public float fadeDuration = 2f; // 서서히 나타나는 시간 (초)
     private Material material1;

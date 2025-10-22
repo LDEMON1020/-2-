@@ -436,7 +436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286374240}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.33985844, y: 0.05423991, z: -0.019637559, w: 0.93870586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -504,11 +504,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60.000004
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -532,8 +532,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32272765, y: 0.05458816, z: -0.018647728, w: 0.94473237}
-  m_LocalPosition: {x: -0.34553587, y: 5.0950003, z: -3.2900343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.5950003, z: -4.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -642,6 +642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397784049}
   - component: {fileID: 397784050}
+  - component: {fileID: 397784051}
   m_Layer: 0
   m_Name: Ice_Rune2
   m_TagString: Untagged
@@ -716,6 +717,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &397784051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397784048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf7c85d572f961478e8225eca8529cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceRune2: {fileID: 1487750951}
+  rotationSpeed: 50
+  playerShooting: {fileID: 889338619}
+  spriteRenderers:
+  - {fileID: 0}
+  spriteRenderers2: []
+  fadeDuration: 2
+  isFading: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1145,7 @@ MonoBehaviour:
   projectilePrefabs:
   - {fileID: 8604706014281164162, guid: 891036a62c439bd409827e089226958f, type: 3}
   - {fileID: 9021560721731318623, guid: bc25956c7564d834d8022a148f445de2, type: 3}
-  Spinning: {fileID: 1487750953}
+  Spinning: {fileID: 397784051}
   attackMode: 0
   firePoint: {fileID: 1487750952}
 --- !u!143 &889338620
@@ -1488,7 +1509,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1487750952}
   - component: {fileID: 1487750954}
-  - component: {fileID: 1487750953}
   m_Layer: 0
   m_Name: firePoint
   m_TagString: Untagged
@@ -1511,23 +1531,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 889338617}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1487750953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487750951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf7c85d572f961478e8225eca8529cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iceRune2: {fileID: 397784048}
-  rotationSpeed: 50
-  playerShooting: {fileID: 889338619}
-  fadeDuration: 2
-  isFading: 0
 --- !u!212 &1487750954
 SpriteRenderer:
   m_ObjectHideFlags: 0
