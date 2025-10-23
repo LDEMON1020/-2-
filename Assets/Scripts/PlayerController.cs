@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum PlayerState { Idle, Attackpreparing, Attack }
-    public PlayerState state = PlayerState.Idle;
-
     public float speed = 5f;
     public float jumpPower = 5f;
     public float gravity = -9.81f;
@@ -23,7 +20,11 @@ public class PlayerController : MonoBehaviour
     public int maxHP = 100;
     private int currentHP;
 
+    public int maxMana = 100;
+    public int currentMana;
+
     public Slider hpSlider;
+    public Slider manaSlider;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,9 @@ public class PlayerController : MonoBehaviour
         pov = virtualCam.GetCinemachineComponent<CinemachinePOV>();
 
         currentHP = maxHP;
+        hpSlider.value = 1f;
+
+        currentMana = maxMana;
         hpSlider.value = 1f;
     }
 
@@ -88,7 +92,7 @@ public class PlayerController : MonoBehaviour
         }
 
        
-        
+        Manaconsume();
     }
 
    
@@ -103,7 +107,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-  void Die()
+    public void Manaconsume()
+    {
+        manaSlider.value = (float)currentMana / maxMana;
+    }
+
+    void Die()
     {
         Destroy(gameObject);
     }

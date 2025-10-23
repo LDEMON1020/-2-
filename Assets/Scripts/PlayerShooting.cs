@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public PlayerController playerController;
+
     public GameObject[] weapons;
     public GameObject[] projectilePrefabs;
 
@@ -27,9 +27,16 @@ public class PlayerShooting : MonoBehaviour
     void Update()
     {
         if (attackMode == true && Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
+                   {
+            GameObject currentProjectilePrefab = projectilePrefabs[currentWeaponIndex];
+            Projectile currentProjectile = currentProjectilePrefab.GetComponent<Projectile>();
+            
+                      if (currentProjectile != null && playerController.currentMana >= currentProjectile.manaconsumption)
+                          {
+                playerController.currentMana -= currentProjectile.manaconsumption;
+                Shoot();
+}
+}
 
         WeaponSwap();
     }

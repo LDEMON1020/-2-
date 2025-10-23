@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: df1d750ec2199a94fa0c3582d20a610f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -102,6 +102,7 @@ MonoBehaviour:
   damage: 3
   speed: 20
   lifeTime: 2
+  manaconsumption: 3
 --- !u!65 &3854112481884162596
 BoxCollider:
   m_ObjectHideFlags: 0
