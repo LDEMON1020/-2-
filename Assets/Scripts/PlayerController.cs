@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float gravity = -9.81f;
     public float attackCooltime = 3f;
 
+    float healingManaScale = 5f;
+
     public CinemachineVirtualCamera virtualCam;
     public float rotationSpeed = 10f;
     private CinemachinePOV pov;
@@ -17,11 +19,11 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     public CinemachineSwitcher cs;
 
-    public int maxHP = 100;
-    private int currentHP;
+    public float maxHP = 100;
+    private float currentHP;
 
-    public int maxMana = 100;
-    public int currentMana;
+    public float maxMana = 100f;
+    public float currentMana;
 
     public Slider hpSlider;
     public Slider manaSlider;
@@ -91,7 +93,7 @@ public class PlayerController : MonoBehaviour
             virtualCam.m_Lens.FieldOfView = 60f;
         }
 
-       
+        HealMana();
         Manaconsume();
     }
 
@@ -115,6 +117,19 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    void HealMana()
+    {
+       if(currentMana < maxMana)
+        {
+            healingManaScale = 5f;
+            currentMana += healingManaScale * Time.deltaTime;
+        }
+       else if(currentMana == maxMana)
+        {
+          healingManaScale = 0f;
+        }
     }
 }
 
