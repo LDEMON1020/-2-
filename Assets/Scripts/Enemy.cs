@@ -69,7 +69,6 @@ public class Enemy : MonoBehaviour
                 else if (CurrentHP <= 1)
                     RunAway();
                 break;
-               
         }
     }
 

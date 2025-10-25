@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 189.3}
+  m_AnchoredPosition: {x: -0, y: 125}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5085483232548965202
@@ -125,7 +125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.2}
+  m_AnchoredPosition: {x: 0, y: 0.57}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2955102498009892569
@@ -291,7 +291,7 @@ Transform:
   m_GameObject: {fileID: 4817599969977866992}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.10125819, y: 1.788, z: -0.15082252}
+  m_LocalPosition: {x: 0, y: 1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -306,9 +306,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6167051526633402678}
-  - component: {fileID: 6695320523900289866}
   - component: {fileID: 4132067464045705780}
   - component: {fileID: 265796914234760287}
+  - component: {fileID: -6265184475953969052}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Enemy
@@ -334,29 +334,6 @@ Transform:
   - {fileID: 5386088719242033131}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &6695320523900289866
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6704823003323845757}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9546355
-  m_Height: 2.056683
-  m_Direction: 1
-  m_Center: {x: 0.10125816, y: 0.84632564, z: -0.15082252}
 --- !u!54 &4132067464045705780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -367,7 +344,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -408,6 +385,27 @@ MonoBehaviour:
   maxHP: 5
   CurrentHP: 0
   hpSlider: {fileID: 5085483232548965202}
+--- !u!65 &-6265184475953969052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704823003323845757}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.81962717, y: 1.3607454, z: 1}
+  m_Center: {x: 0, y: 0.6798668, z: 0}
 --- !u!1 &7960428207834271402
 GameObject:
   m_ObjectHideFlags: 0
