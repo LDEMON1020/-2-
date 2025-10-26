@@ -23,10 +23,17 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Enemy enemy = other.GetComponent<Enemy>();
+        Core core = other.GetComponent<Core>();
         if (other.CompareTag("Enemy"))
         {
             Destroy(gameObject);
             enemy.TakeDamage(damage);
         }
+        else if (other.CompareTag("Core"))
+        {
+            Destroy(gameObject);
+            core.CoreTakeDamage(damage);
+        }
+
     }
 }

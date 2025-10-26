@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public CinemachineSwitcher cs;
 
     public float maxHP = 100;
-    private float currentHP;
+    public float currentHP;
 
     public float maxMana = 100f;
     public float currentMana;
@@ -129,6 +129,18 @@ public class PlayerController : MonoBehaviour
        else if(currentMana == maxMana)
         {
           healingManaScale = 0f;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<MagicBook>() != null)
+        {
+            string info = other.GetComponent<MagicBook>().objInfo;
+            if (info.StartsWith("Scene"))
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(info);
+            }
         }
     }
 }

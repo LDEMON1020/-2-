@@ -26,9 +26,9 @@ public class EnemyProjectile : MonoBehaviour
         transform.position += movDir * speed * Time.deltaTime;
     }
 
-    void OnTriggerEnter(Collider other)
+void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             PlayerController pc = other.GetComponent<PlayerController>();
             if (pc != null) pc.PlayerTakeDamage(damage);

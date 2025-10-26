@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Core : MonoBehaviour
 {
-    public GameObject core;
     public GameObject EnemySpwaner;
 
     public int maxHP = 100;
@@ -23,7 +22,7 @@ public class Core : MonoBehaviour
         
     }
 
-    public void TakeDamage(int damage)
+    public void CoreTakeDamage(int damage)
     {
         CurrentHP -= damage;
         hpSlider.value = (float)CurrentHP / maxHP;

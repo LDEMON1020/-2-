@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
     {
         CurrentHP = maxHP;
         hpSlider.value = 1f;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
         lastAttackTime = -attackCooldown;
     }
 
