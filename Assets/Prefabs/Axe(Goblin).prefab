@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7501035744085553745}
   - component: {fileID: 4205540918293622979}
   m_Layer: 0
-  m_Name: EnemyProjectile
+  m_Name: Axe(Goblin)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5342967396301228199}
+  - {fileID: 7542695541926864106}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7501035744085553745
@@ -68,9 +68,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.31214285, y: 0.31236148, z: 0.31214288}
-  m_Center: {x: -0.15076321, y: -1.8387891, z: -0.051824853}
---- !u!1001 &5597044101023936332
+  m_Size: {x: 0.4956112, y: 1.3196514, z: 0.31214288}
+  m_Center: {x: 0.7432865, y: 0.62248886, z: -0.051824853}
+--- !u!1001 &8009564923787232001
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -78,69 +78,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8927133249686895754}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4671f824c632cce44806742316072ba9,
+    - target: {fileID: 919132149155446097, guid: 13b52d548853afc439ec2aea8340ac80,
         type: 3}
       propertyPath: m_Name
-      value: EnemyProjectile
+      value: Axe(Goblin)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4671f824c632cce44806742316072ba9, type: 3}
---- !u!4 &5342967396301228199 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 13b52d548853afc439ec2aea8340ac80, type: 3}
+--- !u!4 &7542695541926864106 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4671f824c632cce44806742316072ba9,
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13b52d548853afc439ec2aea8340ac80,
     type: 3}
-  m_PrefabInstance: {fileID: 5597044101023936332}
+  m_PrefabInstance: {fileID: 8009564923787232001}
   m_PrefabAsset: {fileID: 0}

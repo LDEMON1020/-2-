@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  moveSpeed: 2
+  moveSpeed: 5
   traceRange: 15
   attackRange: 6
   RunRange: 10
@@ -382,7 +382,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5635284847868971303, guid: 38e24fd7d31b1b84b8b9591275cab1d7,
     type: 3}
   firePoint: {fileID: 5386088719242033131}
-  maxHP: 5
+  maxHP: 7
   CurrentHP: 0
   hpSlider: {fileID: 5085483232548965202}
 --- !u!65 &-6265184475953969052
