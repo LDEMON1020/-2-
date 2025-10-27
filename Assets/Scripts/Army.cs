@@ -11,7 +11,6 @@ public class Army : MonoBehaviour
     public float moveSpeed = 2f;
     public float traceRange = 15f;
     public float attackRange = 6f;
-    public float RunRange = 10f;
 
     public float lifeTime = 2f;
 

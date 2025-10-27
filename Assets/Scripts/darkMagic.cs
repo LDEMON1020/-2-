@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class darkMagic : Projectile
 {
-   public GameObject[] Undead;
+    private bool hasSpawned = false;
+    public GameObject[] Undead;
     public float SpawnRange = 5f;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
+        if(hasSpawned) return;
+
         if (other.CompareTag("Enemy"))
         {
+            Destroy(gameObject);
+            hasSpawned = true;
             Vector3 spawnPos = new Vector3(
                  transform.position.x + Random.Range(-SpawnRange, SpawnRange),
                  transform.position.y,
