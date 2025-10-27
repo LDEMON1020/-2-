@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     public Slider hpSlider;
     public Slider manaSlider;
+
+    public GameObject ReplayPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -118,6 +120,9 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        Time.timeScale = 0f;
+
+        ReplayPanel.SetActive(true);
     }
 
     void HealMana()
