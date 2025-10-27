@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1148687385706469200}
   - component: {fileID: 5821827173734466454}
-  - component: {fileID: 5009812029694361183}
+  - component: {fileID: 6087768220992745312}
   m_Layer: 0
-  m_Name: Fireball
+  m_Name: Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1148687385706469200
 Transform:
   m_ObjectHideFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7590210929848342841}
+  - {fileID: 1893011869860288625}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5821827173734466454
@@ -53,9 +53,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.39653587, y: 0.61740685, z: 0.9572258}
-  m_Center: {x: -0.0003118515, y: 0.8036814, z: -0.08093071}
---- !u!114 &5009812029694361183
+  m_Size: {x: 1.7010193, y: 0.5192375, z: 1.2957478}
+  m_Center: {x: -0.048625946, y: 0.2523489, z: -0.2501917}
+--- !u!114 &6087768220992745312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,14 +64,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9021560721731318623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c777aaaaeb9cc48b80ecfea92e0e00, type: 3}
+  m_Script: {fileID: 11500000, guid: fb660b6da79f5b44684fb3a1919a1ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  speed: 100
+  damage: 5
+  speed: 15
   lifeTime: 5
-  manaconsumption: 1
---- !u!1001 &7989211866823442130
+  manaconsumption: 10
+  player: {fileID: 0}
+--- !u!1001 &2148196378027999130
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -79,69 +80,75 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1148687385706469200}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+    - target: {fileID: -7635826562936255635, guid: 0d1808c73a3b5014ab7ea815a28fc638,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8469494145858465668, guid: cf77b840daa0b114e817752d3e669eb0,
+        type: 3}
+    - target: {fileID: 919132149155446097, guid: 0d1808c73a3b5014ab7ea815a28fc638,
         type: 3}
       propertyPath: m_Name
-      value: fireshot
+      value: Leaf Bullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 718cd52fe2f307946be2a760bf7bc2ae, type: 3}
---- !u!4 &7590210929848342841 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 0d1808c73a3b5014ab7ea815a28fc638, type: 3}
+--- !u!4 &1893011869860288625 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 718cd52fe2f307946be2a760bf7bc2ae,
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d1808c73a3b5014ab7ea815a28fc638,
     type: 3}
-  m_PrefabInstance: {fileID: 7989211866823442130}
+  m_PrefabInstance: {fileID: 2148196378027999130}
   m_PrefabAsset: {fileID: 0}

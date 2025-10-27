@@ -54,8 +54,12 @@ public class PlayerShooting : MonoBehaviour
 
             GameObject projectilePrefab = projectilePrefabs[currentWeaponIndex];
             GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(direction));
+
+        LeafProjectile leaf = proj.GetComponent<LeafProjectile>();
+        if (leaf != null)
+            leaf.player = gameObject;
     }
-   
+
     void WeaponSwap()
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
