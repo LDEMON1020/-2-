@@ -119,7 +119,6 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
         Time.timeScale = 0f;
 
         ReplayPanel.SetActive(true);
