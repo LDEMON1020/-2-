@@ -26,6 +26,8 @@ public class Army : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FindClosestEnemy();
+
         if (Enemy == null) return;
 
         float dist = Vector3.Distance(Enemy.position, transform.position);
@@ -63,7 +65,7 @@ public class Army : MonoBehaviour
             if (enemy != null)
                 enemy.TakeDamage(damage);
 
-            if (enemy2 != null)
+            else if (enemy2 != null)
                 enemy2.TakeDamage(damage);
 
             StartCoroutine(StopTemporarily(1f));
@@ -81,6 +83,31 @@ public class Army : MonoBehaviour
 
         moveSpeed = originalSpeed;
         state = EnemyState.Trace;
+    }
+    void FindClosestEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemies.Length == 0)
+        {
+            Enemy = null;
+            return;
+        }
+
+        GameObject closest = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
+
+        foreach (GameObject e in enemies)
+        {
+            float dist = Vector3.Distance(e.transform.position, currentPos);
+            if (dist < minDist)
+            {
+                closest = e;
+                minDist = dist;
+            }
+        }
+
+        Enemy = closest?.transform;
     }
 }
 
