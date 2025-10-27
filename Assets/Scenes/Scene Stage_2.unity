@@ -1801,13 +1801,13 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 6704823003323845757, guid: d40f9103d497fa44c99d8a4bb94209c1,
+      objectReference: {fileID: 6704823003323845757, guid: edee8b6af9330614ca0bd3b285daebf1,
         type: 3}
     - target: {fileID: 7789953364919589191, guid: 3114728d97dc0bc4e8f35fb51d093c71,
         type: 3}
       propertyPath: enemyPrefab.Array.data[1]
       value: 
-      objectReference: {fileID: 6704823003323845757, guid: edee8b6af9330614ca0bd3b285daebf1,
+      objectReference: {fileID: 6704823003323845757, guid: d40f9103d497fa44c99d8a4bb94209c1,
         type: 3}
     - target: {fileID: 7789953364919589191, guid: 3114728d97dc0bc4e8f35fb51d093c71,
         type: 3}
