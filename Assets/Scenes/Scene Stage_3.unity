@@ -772,11 +772,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60.000004
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -800,8 +800,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29967013, y: -0.35490528, z: 0.12123831, w: 0.87723505}
-  m_LocalPosition: {x: -20.713999, y: 7.13, z: -22.72606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26.76268, y: 7.63, z: -20.024872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1747,10 +1747,12 @@ MonoBehaviour:
   - {fileID: 8604706014281164162, guid: 891036a62c439bd409827e089226958f, type: 3}
   - {fileID: 9021560721731318623, guid: bc25956c7564d834d8022a148f445de2, type: 3}
   - {fileID: 9021560721731318623, guid: 3efa9e2c7501f1348a0b0e06b0525e47, type: 3}
+  - {fileID: 5635284847868971303, guid: 33d2299443862c14fbd8d8ec08bc17b5, type: 3}
   projectilePrefabs:
   - {fileID: 8604706014281164162, guid: 891036a62c439bd409827e089226958f, type: 3}
   - {fileID: 9021560721731318623, guid: bc25956c7564d834d8022a148f445de2, type: 3}
   - {fileID: 9021560721731318623, guid: 3efa9e2c7501f1348a0b0e06b0525e47, type: 3}
+  - {fileID: 5635284847868971303, guid: 33d2299443862c14fbd8d8ec08bc17b5, type: 3}
   Spinning: {fileID: 397784051}
   attackMode: 0
   firePoint: {fileID: 1487750952}

@@ -72,7 +72,8 @@ MonoBehaviour:
   lifeTime: 2
   manaconsumption: 20
   Undead:
-  - {fileID: 0}
+  - {fileID: 6704823003323845757, guid: f9796a74aa94f45419f0a6e3deeb51c8, type: 3}
+  - {fileID: 6704823003323845757, guid: d40f9103d497fa44c99d8a4bb94209c1, type: 3}
   SpawnRange: 0.5
 --- !u!1001 &2899963797192851020
 PrefabInstance:

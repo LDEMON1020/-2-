@@ -308,9 +308,9 @@ GameObject:
   - component: {fileID: 6167051526633402678}
   - component: {fileID: 4132067464045705780}
   - component: {fileID: -6265184475953969052}
-  - component: {fileID: 1348996276909640460}
+  - component: {fileID: 4173453018603453654}
   m_Layer: 0
-  m_Name: Zombie(player)
+  m_Name: Zombie(players)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +382,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.81962717, y: 1.3607454, z: 1}
   m_Center: {x: 0, y: 0.6798668, z: 0}
---- !u!114 &1348996276909640460
+--- !u!114 &4173453018603453654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -391,18 +391,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6704823003323845757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c2040452a0bf14ca25a7d98fccf7b3, type: 3}
+  m_Script: {fileID: 11500000, guid: de6f22a0f4dafc14eb0010389ca690a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
-  damage: 3
-  moveSpeed: 2
-  traceRange: 100
-  attackRange: 100
-  RunRange: 10
-  maxHP: 10
-  CurrentHP: 0
-  hpSlider: {fileID: 5085483232548965202}
 --- !u!1 &7960428207834271402
 GameObject:
   m_ObjectHideFlags: 0

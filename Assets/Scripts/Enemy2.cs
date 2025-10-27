@@ -14,7 +14,6 @@ public class Enemy2 : MonoBehaviour
     public float RunRange = 10f;
 
     private Transform player;
-    private float lastAttackTime;
 
     public int maxHP = 5;
     public int CurrentHP;
