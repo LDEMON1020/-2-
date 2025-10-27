@@ -17,4 +17,8 @@ public class ButtonManager : MonoBehaviour
         Application.Quit();
 #endif
     }
+    public void TitleScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+    }
 }
