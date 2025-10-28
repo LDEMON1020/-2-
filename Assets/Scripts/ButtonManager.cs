@@ -20,7 +20,8 @@ public class ButtonManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Title Scene");
     }
     public void Replay()
-    {         
+    {
+        Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
